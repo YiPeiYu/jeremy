@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximun-scale= 1.0, minimun-scale= 1.0, user-scalable=0">
+		<title>我的团队</title>
+		<link rel="stylesheet" href="libs/bootstrap/dist/css/bootstrap.min.css" />
+		<link href="libs/bootstrap/css/bootstrap.global.css" rel="stylesheet" />
+		<link rel="stylesheet" href="libs/swiper/dist/css/swiper.min.css" />
+		<link rel="stylesheet" href="libs/font-awesome/css/font-awesome.min.css" />
+		<link rel="stylesheet" type="text/css" href="libs/css/common.min.css">
+		<script src="libs/jquery/jquery-2.1.1.min.js"></script>
+		<script type="text/javascript" src="libs/angular/angular.min.js" ></script>
+		<script type="text/javascript" src="libs/bootstrap/dist/js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="libs/swiper/dist/js/swiper.min.js"></script>
+		<script type="text/javascript" src="libs/iscroll/build/iscroll.js"></script>
+		<script type="text/javascript" src="libs/common/common.js" ></script>
+		<script type="text/javascript" src="libs/js/common.js" ></script>
+		<script type="text/javascript" src="libs/js/userlist.js" ></script>
+	</head>
+	<body>
+		<div class="header">
+			<div class="search-bar">
+				<a class="a1" href="javascript:window.history.go(-1)"><i class="fa fa-angle-left" fa-4x" aria-hidden="true"></i></a>
+				<div>我的团队</div>
+				<a class="a2" href="#"><i class="fa fa-bars" fa-2x" aria-hidden="true"></i></a>
+			</div>
+		</div>
+		<div class="navmorelist" id="navmorelist">
+    		<ul class="f14">
+    			<li><a href="index.html">首页</a></li>
+    			<li><a href="products.html">分类查询</a></li>
+    			<li><a href="shopcar.html">购 物 车</a></li>
+    			<li><a href="user.html">会员中心</a></li>
+    		</ul>
+    	</div>
+		<div class="layout-body">
+			<div class="user-finance">
+	            <div class="col-xs-6"><div>100</div><div>总计人数</div></div>
+	            <div class="col-xs-6"><div>50</div><div>已付费人数</div></div>
+        	</div>
+        	<div class="product">
+	   			<ul>
+					<li>
+						<img src="libs/image/l.jpg" dk-bind="img" alt="">
+						<span dk-bind="proName" class="item-name"></span>
+						<span dk-bind="price" class="item-time"></span>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="layout-footer">
+			<a ng-repeat="m in navList" href="index.html" class="nav-btn" style="width:33.333%;">
+				<i class="fa fa-home fa-2x"></i>
+				<span ng-bind="m.name" class="ng-binding">首页</span>
+			</a>
+			<a ng-repeat="m in navList" href="shopcar.html" class="nav-btn " style="width:33.333%;">
+				<i class="fa fa-shopping-cart fa-2x"></i>
+				<span ng-bind="m.name" class="ng-binding">购物车</span>
+			</a>
+			<a ng-repeat="m in navList" href="user.html" class="nav-btn active " style="width:33.333%;">
+				<i class="fa fa-user fa-2x"></i>
+				<span ng-bind="m.name" class="ng-binding">个人中心</span>
+			</a>
+		</div>
+	</body>
+</html>

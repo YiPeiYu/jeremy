@@ -1,0 +1,53 @@
+
+#register_form{
+    position: absolute;top: 2px;padding: 1vh 2vw;width: 100%;box-sizing: border-box;
+       min-height: 400px;
+    ul{ 
+        li{
+            padding: 1vh 0;
+            input{padding: 1vh 1vw;-webkit-box-flex: 1;}
+        }
+        li:nth-child(2){
+            overflow: hidden;
+            input{float: left;}
+            input:nth-child(1){border-bottom-right-radius: 0;border-top-right-radius: 0;width: 30%;}
+            input:nth-child(2){border-bottom-left-radius: 0;border-top-left-radius: 0;width: 70%;}
+        }
+        li:nth-child(3){
+            overflow: hidden;
+            input{float: left;}
+            input:nth-child(1){border-bottom-right-radius: 0;border-top-right-radius: 0;width: 70%;border-right: 0;}
+            button{float: left;width: 30%;border-bottom-left-radius: 0;border-top-left-radius: 0;                                                                                       }
+        }
+        input.btn{background: #e85a90;color: white;font-weight: bold;}
+    }
+}
+
+
+    .error{
+            position: absolute;
+            border: 1px solid #f0f0f0;
+            border-radius: 3px;
+            padding: 10px 10px;
+            background-color: white;
+            font-size: 14px;
+            color: #282828;
+            box-shadow: 0 0 15px #282828;
+        }
+    
+    .error:after{
+        content: "";
+        position: absolute;
+        top: -8px;
+        left: 10px;
+        border-left: 8px solid transparent;
+        border-right: 8px solid transparent;
+        border-bottom: 8px solid white;
+    }
+
+    .error span{
+        display: inline-block;
+        vertical-align: top;
+        line-height: 18px;
+    }
+

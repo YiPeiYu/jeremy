@@ -1,0 +1,7 @@
+﻿{
+	"indexid": {"cn": "用户ID","en": "indexid"},
+	"account": {"cn": "帐号","en": "account"},
+	"phone": {"cn": "手机","en": "phone"},
+	"password": {"cn": "密码","en": "password"},
+	"head_img": {"cn": "用户头像","en": "head_img"}
+}

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximun-scale= 1.0, minimun-scale= 1.0, user-scalable=0">
+		<title>我的资料</title>
+		<link rel="stylesheet" href="libs/bootstrap/dist/css/bootstrap.min.css" />
+		<link href="libs/bootstrap/css/bootstrap.global.css" rel="stylesheet" />
+		<link rel="stylesheet" href="libs/swiper/dist/css/swiper.min.css" />
+		<link rel="stylesheet" href="libs/font-awesome/css/font-awesome.min.css" />
+		<link rel="stylesheet" type="text/css" href="libs/css/common.min.css">
+		<script src="libs/jquery/jquery-2.1.1.min.js"></script>
+		<script type="text/javascript" src="libs/angular/angular.min.js" ></script>
+		<script type="text/javascript" src="libs/bootstrap/dist/js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="libs/swiper/dist/js/swiper.min.js"></script>
+		<script type="text/javascript" src="libs/jquery-confirm/jquery-confirm.js" ></script>
+		<script type="text/javascript" src="libs/jquery-confirm-master\js\jquery-confirm.js"></script>
+		<script type="text/javascript" src="libs/iscroll/build/iscroll.js"></script>
+		<script type="text/javascript" src="libs/common/common.js" ></script>
+		<script type="text/javascript" src="libs/js/common.js" ></script>
+		<script type="text/javascript" src="libs/js/changeuser.js" ></script>
+	</head>
+	<body ng-app="myApp" ng-controller="mycontroller">
+		<div class="header">
+			<div class="search-bar">
+				<a class="a1" href="javascript:window.history.go(-1)"><i class="fa fa-angle-left" fa-4x" aria-hidden="true"></i></a>
+				<div>我的资料</div>
+				<a class="a2" href="#"><i class="fa fa-bars" fa-2x"></i></a>
+			</div>
+		</div>
+		<div class="layout-body">
+	   		<div id="wrapper" class="datum">
+				<div id="scroller">
+					<ul>
+						<li ng-click="resetimg()"><a>头像<img ng-src="{{img}}" src="libs/image/user.jpg"></a></li>
+						<li class="name" ng-click="resetname()"><a>用户名 <span ng-bind="account"></span></a></li>
+						<li ng-click="resetpassword()"><a>修改密码</a></li>
+					</ul>
+				</div>	
+			</div>
+			<div class="pop head_img"></div>
+			<div class="pop name">
+				<div class="form-group">
+				    <input type="text" class="form-control" id="exampleInputEmail1" ng-model="account">
+				  </div>
+				  <button  class="btn btn-default" ng-click="re_name()">保存</button>
+			</div>
+			<div class="pop psw"></div>
+		</div>
+		
+		<div class="layout-footer">
+			<a href="index.html" class="nav-btn active" style="width:33.333%;">
+				<i class="fa fa-home fa-2x"></i>
+				<span class="ng-binding">首页</span>
+			</a>
+			<a href="shopcar.html" class="nav-btn " style="width:33.333%;">
+				<i class="fa fa-shopping-cart fa-2x"></i>
+				<span class="ng-binding">购物车</span>
+			</a>
+			<a href="user.html" class="nav-btn " style="width:33.333%;">
+				<i class="fa fa-user fa-2x"></i>
+				<span class="ng-binding">个人中心</span>
+			</a>
+		</div>
+	</body>
+</html>

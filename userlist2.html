@@ -1,0 +1,52 @@
+<div class="bs-example" data-example-id="bordered-table" ng-controller="userlistController">
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+        	<th ng-repeat="(columnName, columnValue) in data[0]" ng-bind="dictionary[columnName][language] || [columnName]">
+        </tr>
+      </thead>
+      <tbody>
+        <tr ng-repeat="user in data | limitTo : pagerows : (pageindex - 1) * pagerows"">
+            <td class="td" ng-bind="user.indexid"></td>
+            <td class="td" ng-bind="user.account"></td>
+            <td class="td" ng-bind="user.phone"></td>
+            <td class="td" ng-bind="user.password"></td>
+            <td class="img"><img ng-src="{{user['head_img']}}" /></td>
+        </tr>
+      </tbody>
+      <tfoot>
+            <tr id="tf">
+                <td colspan="{{colspan + 1}}">
+                    <button ng-repeat="p in [] | range: pagecount" ng-bind="p" class="{{p == pageindex ? 'active' : ''}}" ng-click="page(p)"></botton>
+                </td>
+            </tr>
+       </tfoot>
+    </table>
+  </div>
+	
+<script type="text/javascript">
+	indexapp.register.controller('userlistController', ['$scope', '$http','$attrs', function ($scope, $http,$attrs) {
+
+    $http.post('userlist.php').success(function(response){
+        $scope.data = response;
+        $scope.colspan = 0;
+        for (var key in $scope.data[0]) {
+            $scope.colspan += 1;
+        }
+
+        //每页显示 5 行
+        $scope.pagerows = 5;
+        $scope.pageindex = 1;
+        $scope.pagecount = Math.ceil($scope.data.length / $scope.pagerows);
+    })
+
+    $scope.page = function (_index) {
+        $scope.pageindex = _index;
+    }
+    $http.get('libs/dictionary/dictionary.txt').success(function(response) {
+		$scope.dictionary = response;
+	})
+	$scope.language = "cn";
+
+}]);
+</script>

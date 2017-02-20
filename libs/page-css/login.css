@@ -1,0 +1,3 @@
+.content{width: 100%;height: 100%;overflow: hidden; background-image: url(../image/bg.jpg);}
+.content>.title{text-align: center;}
+.content>.form-horizontal{width: 500px;height: 300px;margin:180px auto;}

@@ -1,0 +1,56 @@
+
+	<script type="text/javascript" src="libs/jquery/jquery.form.js"></script>
+	<style type="text/css">
+.file {
+    position: relative;
+    display: block;
+    border-radius: 4px;
+    overflow: hidden;
+	
+    text-decoration: none;
+    text-indent: 0;
+    line-height: 20px;
+    margin-bottom: 2vh;
+}
+.file input {
+    position: absolute;
+    font-size: 100px;
+    right: 0;
+    top: 0;
+    opacity: 0;
+}
+.file:hover {
+    background: #AADFFD;
+    border-color: #78C3F3;
+    color: #004974;
+    text-decoration: none;
+}
+	</style>
+	<form >
+		<a href="javascript:;" class="file btn btn-default">选择文件
+		    <input type="file" name="file" id="" accept="image/*">
+		</a>
+		
+
+		<input type="button" name="" value="确定" class="btn btn-default" ng-click="submit()" >
+	</form>	
+	
+	<script type="text/javascript">
+		$(function(){
+			$(':button').click(function(){		
+				$('form').ajaxSubmit({
+					type: 'post',
+					url: common.baseUrl+'php/form.php',
+					success:function(data){
+                        window.location.href = "changeuser.html";
+                    },
+                    error:function(XmlHttpRequest,textStatus,errorThrown){
+                    	$.alert(XmlHttpRequest+" "+textStatus+" "+errorThrown)
+                        console.log(XmlHttpRequest);
+                        console.log(textStatus);
+                        console.log(errorThrown);
+                    }
+				})		
+			})
+		})
+	</script>

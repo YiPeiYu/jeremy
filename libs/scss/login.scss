@@ -1,0 +1,39 @@
+#login{
+position: absolute;
+top: 2px;
+padding: 1vh 2vw;
+width: 100%;
+box-sizing: border-box;
+min-height: 400px; }
+#login ul li {
+    padding: 1vh 0; }
+    #login ul li input {
+      padding: 1vh 1vw;
+      -webkit-box-flex: 1; }
+#login ul li:nth-child(1) {
+    overflow: hidden; }
+    #login ul li:nth-child(1) input {
+      float: left; }
+    #login ul li:nth-child(1) input:nth-child(1) {
+      border-bottom-right-radius: 0;
+      border-top-right-radius: 0;
+      width: 100%; }
+#login ul li:nth-child(2) {
+    position: relative; }
+    #login ul li:nth-child(2) a {
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%); }
+#login ul input.btn {
+    background: #e85a90;
+    color: white;
+    font-weight: bold; }
+#login ul .tips {
+    text-align: right;
+    padding-right: 10px;
+    padding-top: 2vh; }
+    #login ul .tips a {
+      color: #888;
+      font-size: 16px; }
+

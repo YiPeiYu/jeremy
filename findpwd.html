@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximun-scale= 1.0, minimun-scale= 1.0, user-scalable=0">
+		<title>找回密码</title>
+		<link rel="stylesheet" href="libs/bootstrap/dist/css/bootstrap.min.css" />
+		<link href="libs/bootstrap/css/bootstrap-main.css" rel="stylesheet" />
+		<link href="libs/bootstrap/css/bootstrap.global.css" rel="stylesheet" />
+		<link rel="stylesheet" href="libs/swiper/dist/css/swiper.min.css" />
+		<link rel="stylesheet" href="libs/font-awesome/css/font-awesome.min.css" />
+		<link rel="stylesheet" type="text/css" href="libs/css/common.min.css">
+		<script src="libs/jquery/jquery-2.1.1.min.js"></script>
+		<script type="text/javascript" src="libs/angular/angular.min.js" ></script>
+		<script type="text/javascript" src="libs/bootstrap/dist/js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="libs/swiper/dist/js/swiper.min.js"></script>
+		<script type="text/javascript" src="libs/jquery-confirm/jquery-confirm.js" ></script>
+		<script type="text/javascript" src="libs/jquery-confirm-master\js\jquery-confirm.js"></script>
+		<script type="text/javascript" src="libs/iscroll/build/iscroll.js"></script>
+		<script type="text/javascript" src="libs/common/common.js" ></script>
+	</head>
+	<body>
+		<div class="header">
+			<div class="search-bar">
+				<a class="a1" href="javascript:window.history.go(-1)"><i class="fa fa-angle-left" fa-4x" aria-hidden="true"></i></a>
+				<div>找回密码</div>
+				<a class="a2" href="#"><i class="fa fa-bars" fa-2x" aria-hidden="true"></i></a>
+			</div>
+		</div>
+		<div class="layout-body">
+	        <form class="userca login" action="data/bussiness.txt" method="post">
+	            <ul>
+	                <li class="col-xs-4 item-relative"><input type="text" placeholder="国家编码" name="code" class="form-control required" value="86"></li>
+	                <li class="col-xs-8 item-relative"><input type="tel" placeholder="输入手机号码" name="account" class="form-control required isMobile"></li>
+	            </ul>
+	            <ul>
+	                <li class="col-xs-8 item-relative"><input type="text" placeholder="输入短信验证码" name="smsCode" class="form-control required"></li>
+	                <li class="col-xs-4 item-relative"><button type="button" class="btn btn-bricky" ng-click="fetchcode($event)" data-url="data/bussiness.txt" data-method="get">获取验证码</button></li>
+	            </ul>
+	            <ul>
+	                <li class="col-xs-12 item-relative"><input type="password" placeholder="输入密码" id="forgetpwd_password" name="password" class="form-control {required:true,minlength:6}"></li>
+	            </ul>
+	            <ul>
+	                <li class="col-xs-12 item-relative"><input type="password" placeholder="确认密码" name="password2" class="form-control {required:true,minlength:6,comparePwd:'#forgetpwd_password'}"></li>
+	            </ul>
+	            <ul>
+	                <li class="col-xs-12"><div class="btn btn-bricky" ng-click="submit($event)">找回密码</div></li>
+	            </ul>
+	        </form>
+  	 	</div>
+    	<div class="navmorelist" id="navmorelist">
+    		<ul class="f14">
+    			<li><a href="index.html">首页</a></li>
+    			<li><a href="products.html">分类查询</a></li>
+    			<li><a href="shopcar.html">购 物 车</a></li>
+    			<li><a href="user.html">会员中心</a></li>
+    		</ul>
+    	</div>
+	</body>
+</html>

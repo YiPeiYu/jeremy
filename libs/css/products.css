@@ -1,0 +1,200 @@
+.a1 {
+  width: 20px;
+  height: 48px;
+  position: absolute;
+  top: 0;
+  left: 10px; }
+
+.list-page {
+  position: absolute;
+  top: 90px;
+  bottom: 48px; }
+
+.select {
+  position: fixed;
+  top: 48px;
+  height: 48px;
+  background: #EEEEEE;
+  box-shadow: 0px 2px 2px #888888;
+  width: 100%;
+  padding: 10px 0; }
+  .select > div {
+    height: 28px;
+    line-height: 24px;
+    text-align: center;
+    float: left;
+    width: calc(99%/3);
+    color: #666666;
+    font-size: 14px; }
+  .select .col1, .select .col2 {
+    border-right: 1px solid #ccc; }
+    .select .col1 i, .select .col2 i {
+      transition: all .2s; }
+  .select > div.active {
+    color: darkred; }
+    .select > div.active i {
+      transform: rotate(180deg); }
+
+.select-content {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 96px;
+  bottom: 48px;
+  display: none;
+  z-index: 10; }
+  .select-content ul {
+    width: calc(100%/3);
+    height: 100%;
+    float: left; }
+    .select-content ul li {
+      padding: 10px 0 10px 5px; }
+      .select-content ul li a {
+        color: #777; }
+      .select-content ul li .active {
+        color: blueviolet; }
+  .select-content ul:nth-child(1) {
+    background: #ddd; }
+    .select-content ul:nth-child(1) li.active {
+      background: #eee; }
+  .select-content ul:nth-child(2) {
+    background: #eee; }
+    .select-content ul:nth-child(2) li {
+      display: none; }
+    .select-content ul:nth-child(2) li.active {
+      background: #fff; }
+    .select-content ul:nth-child(2) li.show {
+      display: block; }
+  .select-content ul:nth-child(3) {
+    background: #fff; }
+    .select-content ul:nth-child(3) li {
+      display: none; }
+    .select-content ul:nth-child(3) li.show {
+      display: block; }
+
+.select-content2 {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 96px;
+  bottom: 48px;
+  background: #eee;
+  display: none;
+  z-index: 10; }
+  .select-content2 ul {
+    width: 100%;
+    height: 100%; }
+    .select-content2 ul li {
+      height: 30px;
+      line-height: 30px;
+      padding: 1px;
+      border-bottom: 1px solid #CCCCCC; }
+      .select-content2 ul li a {
+        color: black; }
+      .select-content2 ul li .active {
+        color: blueviolet; }
+
+.list > .product {
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  overflow: auto;
+  padding: 0; }
+  .list > .product ul {
+    width: 100%;
+    height: 100%;
+    overflow: hidden; }
+  .list > .product li {
+    width: 49%;
+    float: left;
+    border: 1px solid #ccc;
+    margin-top: 6px;
+    margin-right: 3px; }
+    .list > .product li a {
+      padding: 8px;
+      height: 220px;
+      background-color: #fff;
+      margin: 2px;
+      width: 100%;
+      float: left;
+      display: block; }
+      .list > .product li a span {
+        width: 100%;
+        height: 22px;
+        line-height: 22px;
+        font-size: 9px;
+        color: #000;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden; }
+      .list > .product li a img {
+        width: 100%;
+        height: 162px;
+        border-radius: 4px; }
+      .list > .product li a .item-price {
+        font-size: 14px;
+        font-weight: bold;
+        color: #e80080; }
+
+.navmorelist {
+  width: 126px;
+  position: absolute;
+  top: 58px;
+  right: 10px;
+  background: #484F55;
+  z-index: 350;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  -webkit-transform-origin: 0px 0px 0px;
+  opacity: 0.9;
+  -webkit-transform: scale(1, 1);
+  display: none; }
+  .navmorelist li {
+    border-bottom: 1px solid #5B6166;
+    height: 38px;
+    line-height: 38px;
+    text-align: left;
+    text-indent: 2.5em;
+    background: #484F55; }
+    .navmorelist li a {
+      color: #fff; }
+  .navmorelist li:last-child {
+    border-bottom: 0; }
+
+.navmorelist:after {
+  content: "";
+  position: absolute;
+  top: -16px;
+  right: 8px;
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-color: transparent transparent #484F55 transparent;
+  border-width: 8px; }
+
+.layout-footer {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 54px;
+  border-top: solid 1px #ccc;
+  padding: 7px 0;
+  background-color: #fff; }
+  .layout-footer .nav-btn.active {
+    color: #8E488E; }
+  .layout-footer .nav-btn {
+    display: block;
+    float: left;
+    text-align: center;
+    color: #777; }
+    .layout-footer .nav-btn i {
+      font-size: 20px; }
+    .layout-footer .nav-btn .clip-cart:before {
+      content: "\e044"; }
+    .layout-footer .nav-btn .clip-home:before {
+      content: "\e019"; }
+    .layout-footer .nav-btn span {
+      display: block;
+      font-size: 12px; }

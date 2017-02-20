@@ -1,0 +1,50 @@
+#wrapper.datum #scroller ul li {
+  border-bottom: 1px #ccc solid; }
+  #wrapper.datum #scroller ul li > a {
+    color: black;
+    text-decoration: none;
+    display: block;
+    padding: 18px 3vh;
+    position: relative; }
+    #wrapper.datum #scroller ul li > a > img {
+      position: absolute;
+      right: 5%;
+      top: 50%;
+      height: 5vh;
+      width: 5vh;
+      border-radius: 50%;
+      transform: translateY(-50%); }
+
+#wrapper.datum #scroller ul .name span {
+  float: right;
+  font-size: 18px;
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  padding-right: 2vw; }
+
+#wrapper.datum #scroller ul li:last-child {
+  border-bottom: 0; }
+
+.pop_mask {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 100; }
+
+.pop {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  background-color: white;
+  z-index: 200;
+  border-radius: 10px;
+  display: none;
+  transform: translate(-50%, -50%);
+  padding: 3vh 5vw;
+  text-align: center; }
+  .pop input {
+    height: 6vh;
+    width: 70vw;
+    min-height: 50px; }

@@ -1,0 +1,1 @@
+$(function(){$(".header").load("header.html?_="+Math.random(),function(){$("#header").click(function(){console.log("header")})}),$(".footer").load("footer.html?_="+Math.random()),console.log(1)});

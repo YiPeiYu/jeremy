@@ -1,0 +1,128 @@
+
+.item-title{
+    margin: 3px 10px;
+}
+.item-price{
+    color: red;
+    font-size: 14px;
+    margin-left: 10px;
+}
+.category2 {
+    width: 100%;
+    background-color: #fff;
+    margin-top: 10px;
+    padding: 10px;
+    p {
+        text-align: left;
+        color: #999;
+        margin: 0 0 10px;
+        span {
+            color: #000;
+            font-size: 14px;
+        }
+    }
+}
+.evaluate {
+    width: 100%;
+    display: none;
+    position: absolute;
+    top: 48px;
+    left: 0;
+    right: 0;
+    bottom: 48px;
+    overflow: auto;
+    div {
+        width: 100%;
+        margin-top: 10px;
+        background-color: #fff;
+        ul {
+            width: 100%;
+            padding: 0 10px;
+            li {
+                text-align: left;
+                padding: 0;
+            }
+        }
+        ul:first-child {
+            height: 42px;
+            line-height: 42px;
+            border-bottom: solid 1px #eee;
+            li{
+                height: 41px;
+            }
+            li:first-child >span{
+                vertical-align: middle;
+            }
+            li:last-child{
+                text-align: right;
+                color: #aaa;
+            }
+        }
+        ul:last-child>li{
+            width: 100%;
+            i{
+                padding: 0 3px;
+                color: red;
+            }
+        }
+    }
+}
+.evaluate>div>ul:first-child>li:first-child>span>img {
+    width: 25px;
+    height: 25px;
+    border-radius: 100%;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+.col-xs-6{
+    width: 50%;
+}
+
+.buy-toolbar {
+    position: fixed;
+    bottom: 0;
+    height: 48px;
+    width: 100%;
+    line-height: 48px;
+    font-size: 14px;
+    color: #fff;
+    text-align: center;
+    border-top: solid 1px #8E488E;
+    .col-xs-3 {
+        width: 25%;
+        .buy-car {
+            position: relative;
+            height: 40px;
+            color: #000;
+            margin-top: 8px;
+             i {
+                font-size: 25px;
+                color: #8E488E;
+            }
+            div.item-count {
+                background-color: #8E488E;
+                min-width: 15px;
+                height: 15px;
+                border-radius: 100%;
+                position: absolute;
+                right: 8px;
+                top: 3px;
+                font-size: 9px;
+                text-align: center;
+                color: #fff;
+                padding: 0 2px;
+                line-height: 15px;
+            }
+        }
+    }
+    a:nth-child(2) {
+        background-color: #dd3d97;
+        height: 100%;
+        color: #fff;
+    }
+    a:last-child {
+        background-color: #8E488E;
+        height: 100%;
+        color: #fff;
+    }
+}

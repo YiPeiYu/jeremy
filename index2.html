@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="libs/bootstrap/css/bootstrap.min.css" />
+		<link rel="stylesheet" href="libs/page-css/index.css" />
+		<link rel="stylesheet" href="libs/jquery-confirm-master/css/jquery-confirm.css" />
+		<script type="text/javascript" src="libs/jquery/jquery-2.1.1.min.js"></script>
+		<script type="text/javascript" src="libs/angular/angular.min.js"></script>
+		<script type="text/javascript" src="libs/jquery-confirm/jquery-confirm.js"></script>
+		<script type="text/javascript" src="libs/common/common.js"></script>
+		<script type="text/javascript" src="libs/bootstrap/js/bootstrap.main.js"></script>
+	</head>
+	<body ng-app="indexapp" ng-controller="indexcontroller">
+		<div class="Header">
+			<div ng-bind="account"></div>
+		</div>
+		<div class="Container">
+			<div class="nav" >
+				<ul class="list-group">
+					<li class="list-group-item" ng-click="userlist()"><a href="javascript:">用户列表</a></li>
+					<li class="list-group-item" ng-click="goods()"><a href="javascript:">商品列表</a></li>
+					<li class="list-group-item"><a href="javascript:">订单列表</a></li>
+					<li class="list-group-item" ng-click="logout()"><a href="javascript:">退出登陆</a></li>
+				</ul>
+			</div>
+			<div class="content" lang="cn"></div>
+		</div>
+		<div class="Footer"></div>
+	</body>
+	<script type="text/javascript">
+		var indexapp = angular.module('indexapp',['commonApp']);
+		
+			indexapp.config(function($controllerProvider){
+				indexapp.register = {
+					controller: $controllerProvider.register
+				}
+			})
+			indexapp.controller('indexcontroller',['$scope','$http','$compile', function($scope,$http,$compile){	
+				$scope.userlist = function(){
+					//jquery load
+					$http.get('userlist2.html').success(function(response){
+						$compile($('.content').html(response))($scope);
+					})
+				}
+				$scope.goods = function(){
+					//jquery load
+					$http.get('goods.html').success(function(response){
+						$compile($('.content').html(response))($scope);
+					})
+				}
+				$http.get('login_info.php').success(function(response){
+					if(response.state){
+						$scope.account = response.account;
+					}else{
+						window.location.href = "login2.html";
+					}
+				})
+				$scope.logout = function(){
+					$http.get('logout.php').success(function(response){
+						window.location.href = "login2.html";
+					})
+				}
+			}])
+			$(function(){
+				$(document).on('click',function(evt){
+					if($(evt.target).is(".content>.bs-example>.table>tbody>tr>td")){
+						$(evt.target).addClass('input').html('<input type="text" value="'+$(evt.target).text() +'" />').find('input').focus().blur(function(){
+							$(evt.target).removeClass('input').html($('input').val())
+						})
+					}
+//					if($(evt.target).is(".content>.bs-example>.table>tbody>.tr>td>button")){
+//						$(evt.target).parent().parent().remove()
+//					}
+				})
+			})
+	</script>
+</html>

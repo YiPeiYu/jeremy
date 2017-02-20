@@ -1,0 +1,63 @@
+@charset "UTF-8";
+#wrapper.cart #scroller ul li {
+  padding: 1.5vh 0;
+  overflow: hidden;
+  height: 18vh;
+  position: relative; }
+  #wrapper.cart #scroller ul li > div {
+    float: left;
+    height: 100%; }
+  #wrapper.cart #scroller ul li .item-option {
+    text-align: center;
+    width: 15%;
+    line-height: 18vh;
+    font-size: 28px;
+    font-weight: bold; }
+  #wrapper.cart #scroller ul li .item-img {
+    width: 35%;
+    text-align: center;
+    line-height: 32vh; }
+    #wrapper.cart #scroller ul li .item-img img {
+      height: 15vh;
+      width: 15vh; }
+  #wrapper.cart #scroller ul li .item-content {
+    width: 50%;
+    font-family: 'Microsoft YaHei',"Comic Sans MS","幼圆","黑体",sans-serif; }
+    #wrapper.cart #scroller ul li .item-content > p {
+      overflow: hidden;
+      white-space: nowrap;
+      height: 45%;
+      padding: 2vh 2vw;
+      width: 100%;
+      color: darkgoldenrod; }
+    #wrapper.cart #scroller ul li .item-content > div {
+      width: 100%;
+      overflow: hidden;
+      margin-top: 1vh; }
+      #wrapper.cart #scroller ul li .item-content > div *:not(i) {
+        float: left; }
+      #wrapper.cart #scroller ul li .item-content > div > i {
+        margin-top: 0.5vh;
+        font-size: 20px;
+        margin-left: 2vw; }
+    #wrapper.cart #scroller ul li .item-content .pri {
+      margin-right: 3vw;
+      margin-top: 1vh; }
+    #wrapper.cart #scroller ul li .item-content .item-calc {
+      border: 1px solid goldenrod;
+      border-radius: 10%; }
+      #wrapper.cart #scroller ul li .item-content .item-calc div {
+        width: 7vw;
+        height: 7vw;
+        line-height: 7vw;
+        text-align: center; }
+
+#wrapper.cart #scroller ul li:after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  content: "";
+  height: 1px;
+  background: #ccc;
+  transform: translateY(0.1); }

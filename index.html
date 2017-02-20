@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximun-scale= 1.0, minimun-scale= 1.0, user-scalable=0">
+		<title>首页</title>
+		<link rel="stylesheet" href="libs/bootstrap/dist/css/bootstrap.min.css" />
+		<link href="libs/bootstrap/css/bootstrap-main.css" rel="stylesheet" />
+		<link href="libs/bootstrap/css/bootstrap.global.css" rel="stylesheet" />
+		<link href="libs/fonts/style.css" rel="stylesheet" />
+		<link rel="stylesheet" href="libs/swiper/dist/css/swiper.min.css" />
+		<link rel="stylesheet" href="libs/font-awesome/css/font-awesome.min.css" />
+		<link rel="stylesheet" href="libs/jquery-confirm/jquery-confirm.css" />
+		<link rel="stylesheet" type="text/css" href="libs/jquery-confirm-master/css/jquery-confirm.css"/>
+		<link rel="stylesheet" type="text/css" href="libs/css/common.min.css">
+		<script src="libs/jquery/jquery-2.1.1.min.js"></script>
+		<script type="text/javascript" src="libs/angular/angular.min.js" ></script>
+		<script type="text/javascript" src="libs/bootstrap/dist/js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="libs/swiper/dist/js/swiper.min.js"></script>
+		<script type="text/javascript" src="libs/jquery-confirm/jquery-confirm.js" ></script>
+		<script type="text/javascript" src="libs/jquery-confirm-master\js\jquery-confirm.js"></script>
+		<script type="text/javascript" src="libs/iscroll/build/iscroll.js"></script>
+		<script src="libs/jquery/jquery.lazyload.min.js"></script>
+		<script type="text/javascript" src="libs/js/index.js" ></script>
+	</head>
+
+	<body onload="loaded()" ng-app="indexapp" ng-controller="indexcontroller">
+		<div class="header">
+			<div class="search-bar index">
+				<div class="index1">商城</div>
+				<a href="#" ng-click="showSearch()"><i class="fa fa-search " aria-hidden="true"></i></a>
+			</div>
+		</div>
+		<div class="search-content item-hidden">
+	        <div class="search-bar">
+	            <div>商品搜索</div>
+	            <a href="#" ng-click="closeSearch()"><i class="clip-close-2"></i></a>
+	        </div>  
+	        <div class="input-group">
+	            <span class="input-group-addon"><i class="clip-search-3"></i> </span>
+	            <input type="text" class="form-control date-range" ng-model="keyword">
+	            <span class="input-group-addon" ><a href="products.html?keyword={{keyword}}">搜索</a></span>
+	        </div>
+	    </div>
+		<div class="wrapper">
+			<div class="scroller index">
+				<ul>
+					<li>
+						<div class="swiper-container">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide"><img src="libs/image/banner1.jpg" /></div>
+								<div class="swiper-slide"><img src="libs/image/banner2.jpg" /></div>
+								<div class="swiper-slide"><img src="libs/image/banner3.jpg" /></div>
+								<div class="swiper-slide"><img src="libs/image/banner4.jpg" /></div>
+								<div class="swiper-slide"><img src="libs/image/banner5.jpg" /></div>
+							</div>
+							<div class="swiper-pagination"></div>
+						</div>
+					</li>
+				</ul>
+					<a href="products.html"><img class="item-img" src="libs/image/title.jpg" /></a>
+					<a href="products.html"><img class="item-img" src="libs/image/1.jpg" /></a>
+					<a href="products.html"><img class="item-img" src="libs/image/2.jpg" /></a>
+					<a href="products.html"><img class="item-img" src="libs/image/16.jpg" /></a>
+					<div class="nav1"><a href="products.html"><img src="libs/image/3.jpg" /></a></div>
+					<div class="nav2"><a href="products.html"><img src="libs/image/4.jpg" /></a></div>
+					<div class="nav1"><a href="products.html"><img src="libs/image/5.jpg" /></a></div>
+					<div class="nav2"><a href="products.html"><img src="libs/image/6.jpg" /></a></div>
+					<div class="nav1"><a href="products.html"><img src="libs/image/7.jpg" /></a></div>
+					<div class="nav2"><a href="products.html"><img src="libs/image/8.jpg" /></a></div>
+					<div class="nav1"><a href="products.html"><img src="libs/image/9.jpg" /></a></div>
+					<div class="nav2"><a href="products.html"><img src="libs/image/10.jpg" /></a></div>
+					<a href="products.html"><img class="item-img" src="libs/image/11.jpg" /></a>
+					<a href="products.html"><img class="item-img" src="libs/image/12.jpg" /></a>
+					<a href="products.html"><img class="item-img" src="libs/image/13.jpg" /></a>
+					<a href="products.html"><img class="item-img" src="libs/image/14.jpg" /></a>
+					<a href="products.html"><img class="item-img" src="libs/image/15.jpg" /></a>
+					<a href="products.html"><img class="item-img" src="libs/image/17.jpg" /></a>
+				
+				<div class="products" ng-repeat=" pro in data">
+					<div class="img"><a href="products.html"><img ng-src="{{pro['img']}}" /></a></div>
+					<div class="present" ng-bind="pro['proName']"></div>
+					<div class="price" ng-bind="pro['price'] + 'RMB'"></div>
+				</div>
+			</div>
+		</div>
+		<div id="top"><i class="fa fa-arrow-up fa-2x"></i></div>
+		<div class="layout-footer">
+			<a href="index.html" class="nav-btn active" style="width:33.333%;">
+				<i class="fa fa-home fa-2x"></i>
+				<span  class="ng-binding">首页</span>
+			</a>
+			<a href="shopcar.html" class="nav-btn " style="width:33.333%;">
+				<i class="fa fa-shopping-cart fa-2x"></i>
+				<span  class="ng-binding">购物车</span>
+			</a>
+			<a href="user.html" class="nav-btn " style="width:33.333%;">
+				<i class="fa fa-user fa-2x"></i>
+				<span  class="ng-binding">个人中心</span>
+			</a>
+		</div>
+	</body>
+
+</html>

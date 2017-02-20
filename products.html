@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximun-scale= 1.0, minimun-scale= 1.0, user-scalable=0">
+		<title>商品专区</title>
+		<link rel="stylesheet" href="libs/bootstrap/dist/css/bootstrap.min.css" />
+		<link href="libs/bootstrap/css/bootstrap.global.css" rel="stylesheet" />
+		<link rel="stylesheet" href="libs/swiper/dist/css/swiper.min.css" />
+		<link rel="stylesheet" href="libs/font-awesome/css/font-awesome.min.css" />
+		<link rel="stylesheet" href="libs/jquery-confirm/jquery-confirm.css" />
+		<link rel="stylesheet" type="text/css" href="libs/jquery-confirm-master/css/jquery-confirm.css"/>
+		<link rel="stylesheet" type="text/css" href="libs/css/common.min.css">
+		<script src="libs/jquery/jquery-2.1.1.min.js"></script>
+		<script type="text/javascript" src="libs/angular/angular.min.js" ></script>
+		<script type="text/javascript" src="libs/bootstrap/dist/js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="libs/swiper/dist/js/swiper.min.js"></script>
+		<script type="text/javascript" src="libs/jquery-confirm/jquery-confirm.js" ></script>
+		<script type="text/javascript" src="libs/jquery-confirm-master\js\jquery-confirm.js"></script>
+		<script type="text/javascript" src="libs/iscroll/build/iscroll.js"></script>
+		<script type="text/javascript" src="libs/common/common.js" ></script>
+		<script type="text/javascript" src="libs/js/common.js" ></script>
+		<script type="text/javascript" src="libs/js/products.js" ></script>
+	</head>
+
+	<body onload="loaded()">
+		<div class="header">
+			<div class="search-bar">
+				<a class="a1" href="javascript:window.history.go(-1)"><i class="fa fa-angle-left" fa-4x" aria-hidden="true"></i></a>
+				<div>运动鞋专区</div>
+				<a class="a2" href="#"><i class="fa fa-bars" fa-2x" aria-hidden="true"></i></a>
+			</div>
+		</div>
+		<div id="wrapper" class="wrapper list-page">
+			<div id="scroller" class="scroller list">
+   				 <div class="product" ng-app="listApp" ng-controller="listcontroller">
+	   				 <ul>
+						<li class="goods" ng-repeat="pro in data">
+							<a href="#" title="" pro_id = "{{pro['id']}}" >
+								<img ng-src="{{pro['img']}}"/>
+								<span  ng-bind="pro['proName']"></span>
+								<span  class="item-price" ng-bind="pro['price']"></span><em>RMB</em>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="select">
+	        <div class="col1">分类 <i class="fa fa-caret-down"></i></div>
+	        <div class="col2">品牌 <i class="fa fa-caret-down"></i></div>
+	        <div class="col">价格排序 <i class="fa fa-caret-down"></i></div>
+   		 </div>
+   		 
+   		 <div class="select-content">
+	        <ul class="leval1">
+	            <li><a id="1" >分类1-1</a></li>
+	            <li><a id="2" >分类1-2</a></li>
+	            <li><a id="3" >分类1-3</a></li>
+	            <li><a id="4" >分类1-4</a></li>
+	            <li><a id="5" >分类1-5</a></li>
+	        </ul>
+	        <ul class="leval2">
+	            <li ><a id="6" flag="1">分类2-1</a></li>
+	            <li ><a  id="7" flag="1">分类2-2</a></li>
+	            <li ><a  id="8" flag="1">分类2-3</a></li>
+	            <li ><a  id="9" flag="2">分类2-4</a></li>
+	            <li ><a  id="10" flag="3">分类2-5</a></li>
+	        </ul>   
+	        <ul class="leval3">
+	            <li><a  id="11" flag="6">分类3-1</a></li>
+	            <li><a  id="12" flag="7">分类3-2</a></li>
+	            <li><a  id="13" flag="9">分类3-3</a></li>
+	            <li><a  id="14" flag="9">分类3-4</a></li>
+	            <li><a  id="15" flag="9">分类3-5</a></li>
+	        </ul>              
+	    </div>
+	    <div class="select-content2">
+	        <ul>
+	            <li><a href="#">品牌1</a></li>
+	            <li><a href="#">品牌2</a></li>
+	            <li><a href="#">品牌3</a></li>
+	            <li><a href="#">品牌4</a></li>
+	            <li><a href="#">品牌5</a></li>
+	        </ul>
+   		</div>
+    	<div class="navmorelist" id="navmorelist">
+    		<ul class="f14">
+    			<li><a href="index.html">首页</a></li>
+    			<li><a href="products.html">分类查询</a></li>
+    			<li><a href="shopcar.html">购 物 车</a></li>
+    			<li><a href="user.html">会员中心</a></li>
+    		</ul>
+    	</div>
+		<div class="layout-footer">
+			<a href="index.html" class="nav-btn" style="width:33.333%;">
+				<i class="fa fa-home fa-2x"></i>
+				<span class="ng-binding">首页</span>
+			</a>
+			<a href="shopcar.html" class="nav-btn " style="width:33.333%;">
+				<i class="fa fa-shopping-cart fa-2x"></i>
+				<span class="ng-binding">购物车</span>
+			</a>
+			<a href="user.html" class="nav-btn " style="width:33.333%;">
+				<i class="fa fa-user fa-2x"></i>
+				<span class="ng-binding">个人中心</span>
+			</a>
+		</div>
+	</body>
+	
+</html>

@@ -1,0 +1,6 @@
+﻿{
+	"id": {"cn": "商品ID","en": "ID"},
+	"proName": {"cn": "商品名","en": "proName"},
+	"price": {"cn": "商品价格","en": "price"},
+	"img": {"cn": "商品图片","en": "img"}
+}

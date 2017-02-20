@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximun-scale= 1.0, minimun-scale= 1.0, user-scalable=0">
+		<title>我的订单</title>
+		<link rel="stylesheet" href="libs/bootstrap/dist/css/bootstrap.min.css" />
+		<link rel="stylesheet" href="libs/bootstrap/css/bootstrap.global.css" />
+		<link rel="stylesheet" href="libs/swiper/dist/css/swiper.min.css" />
+		<link rel="stylesheet" href="libs/font-awesome/css/font-awesome.min.css" />
+		<link rel="stylesheet" href="libs/jquery-confirm/jquery-confirm.css" />
+		<link href="libs/fonts/style.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="libs/jquery-confirm-master/css/jquery-confirm.css"/>
+		<link rel="stylesheet" type="text/css" href="libs/css/common.min.css">
+		<script src="libs/jquery/jquery-2.1.1.min.js"></script>
+		<script type="text/javascript" src="libs/angular/angular.min.js" ></script>
+		<script type="text/javascript" src="libs/bootstrap/dist/js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="libs/swiper/dist/js/swiper.min.js"></script>
+		<script type="text/javascript" src="libs/jquery-confirm/jquery-confirm.js" ></script>
+		<script type="text/javascript" src="libs/jquery-confirm-master\js\jquery-confirm.js"></script>
+		<script type="text/javascript" src="libs/iscroll/build/iscroll.js"></script>
+		<script type="text/javascript" src="libs/common/common.js" ></script>
+		<script type="text/javascript" src="libs/js/common.js" ></script>
+		<script type="text/javascript" src="libs/js/orderlist.js" ></script>
+	</head>
+	<body ng-app="mainapp" ng-controller="maincontroller">
+    <div class="header">
+		<div class="search-bar">
+			<a class="a1" href="javascript:window.history.go(-1)"><i class="fa fa-angle-left" fa-4x" aria-hidden="true"></i></a>
+			<div>我的订单</div>
+			<a class="a2"><i class="fa fa-bars" fa-2x" aria-hidden="true"></i></a>
+		</div>
+	</div>
+	<div class="navmorelist" id="navmorelist">
+	    <ul class="f14">
+    		<li><a href="index.html">首页</a></li>
+    		<li><a href="products.html">分类查询</a></li>
+    		<li><a href="shopcar.html">购 物 车</a></li>
+    		<li><a href="user.html">会员中心</a></li>
+    	</ul>
+    </div>
+    <div class="categorys">
+        <a href="orderlist.html?state=0" class="{{state == 0 ? 'active' : ''}}">全部</a>
+        <a href="orderlist.html?state=1" class="{{state == 1 ? 'active' : ''}}">待付款</a>
+        <a href="orderlist.html?state=2" class="{{state == 2 ? 'active' : ''}}">待发货</a>
+        <a href="orderlist.html?state=3" class="{{state == 3 ? 'active' : ''}}">待收货</a>
+        <a href="orderlist.html?state=4" class="{{state == 4 ? 'active' : ''}}">待评价</a>
+    </div>
+    <div class="order-content">
+        <div class="order-item">
+        	<div class="shopname">
+                <div class="col-xs-8"><a href="#">店铺1</a></div>
+                <div class="col-xs-4 text-right">交易成功</div>
+            </div>
+            <div class="product-content">
+                <div ng-repeat="pro in data">
+                    <div class="item-img"><a href="orderdetail.html"><img ng-src="{{pro['img']}}" /></a></div>
+                    <a href="orderdetail.html" class="item-content">
+                        <span class="item-name" ng-bind="pro['proName']"></span>
+                        <span class="item-controller">
+                            <span class="item-price" ng-bind="'￥' + pro['price']">￥ 120</span>
+                            <span class="item-count">X <span ng-bind="pro['num']">2</span></span>
+                        </span>
+                    </a>
+                </div>
+            </div>
+            <div class="item-total text-right">
+                共<span ng-bind="Num"></span>商品，合计：<span ng-bind="total"></span>
+            </div>
+            <div class="item-control">
+                <a href="orderdetail.html">付款</a>
+                <a href="#" ng-click="deleteorder()">删除订单</a>
+                <a href="#">查看物流</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="layout-footer">
+			<a href="index.html" class="nav-btn active" style="width:33.333%;">
+				<i class="fa fa-home fa-2x"></i>
+				<span class="ng-binding">首页</span>
+			</a>
+			<a href="shopcar.html" class="nav-btn " style="width:33.333%;">
+				<i class="fa fa-shopping-cart fa-2x"></i>
+				<span class="ng-binding">购物车</span>
+			</a>
+			<a href="user.html" class="nav-btn " style="width:33.333%;">
+				<i class="fa fa-user fa-2x"></i>
+				<span class="ng-binding">个人中心</span>
+			</a>
+		</div>
+	</body>
+</html>

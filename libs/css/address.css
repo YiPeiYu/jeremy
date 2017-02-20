@@ -1,0 +1,61 @@
+.address {
+  width: 100%;
+  position: relative;
+  height: 82px;
+  border-bottom: solid 1px #ccc; }
+
+.address > div:first-child, .address > div:last-child {
+  width: 50px;
+  float: left;
+  text-align: center;
+  font-size: 18px;
+  line-height: 68px; }
+
+.address > div:nth-child(2) {
+  position: absolute;
+  left: 50px;
+  right: 50px; }
+
+.address > div:last-child {
+  position: absolute;
+  right: 0;
+  width: 50px; }
+
+.address > div > a {
+  display: block;
+  padding: 5px 0;
+  font-size: 12px; }
+
+.address > div > a > span {
+  margin-right: 10px;
+  font-weight: bold;
+  font-size: 14px; }
+
+.shoppingcar-toolbar {
+  width: 100%;
+  height: 46px;
+  position: fixed;
+  bottom: 0;
+  line-height: 48px;
+  text-align: center;
+  text-align: center; }
+
+.shoppingcar-toolbar div {
+  padding: 0; }
+
+.shoppingcar-toolbar i {
+  font-size: 20px;
+  vertical-align: middle; }
+
+.shoppingcar-toolbar i.fa-check-circle {
+  color: #8E488E; }
+
+.shoppingcar-toolbar span {
+  vertical-align: middle; }
+
+.shoppingcar-toolbar > a.btn {
+  display: block;
+  background-color: #e85a90;
+  color: #fff;
+  width: 85%;
+  margin: auto; }
